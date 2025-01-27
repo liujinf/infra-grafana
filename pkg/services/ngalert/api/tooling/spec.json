@@ -3588,6 +3588,9 @@
           "description": "Error is a property to be set if the corresponding DataQuery has an error.",
           "type": "string"
         },
+        "ErrorSource": {
+          "$ref": "#/definitions/ErrorSource"
+        },
         "Frames": {
           "$ref": "#/definitions/Frames"
         },
@@ -3791,6 +3794,10 @@
           }
         }
       }
+    },
+    "ErrorSource": {
+      "description": "ErrorSource type defines the source of the error",
+      "type": "string"
     },
     "ErrorType": {
       "type": "string",
@@ -7292,7 +7299,6 @@
       "$ref": "#/definitions/gettableAlert"
     },
     "gettableAlerts": {
-      "description": "GettableAlerts gettable alerts",
       "type": "array",
       "items": {
         "$ref": "#/definitions/gettableAlert"
@@ -7350,6 +7356,7 @@
       "$ref": "#/definitions/gettableSilence"
     },
     "gettableSilences": {
+      "description": "GettableSilences gettable silences",
       "type": "array",
       "items": {
         "$ref": "#/definitions/gettableSilence"
@@ -7502,6 +7509,7 @@
       }
     },
     "postableSilence": {
+      "description": "PostableSilence postable silence",
       "type": "object",
       "required": [
         "comment",
@@ -7540,7 +7548,6 @@
       "$ref": "#/definitions/postableSilence"
     },
     "receiver": {
-      "description": "Receiver receiver",
       "type": "object",
       "required": [
         "active",
